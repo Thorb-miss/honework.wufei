@@ -2,16 +2,16 @@
 
 int main(void)
 {
-    int term=1,n,i,sum;
+    int term=1,i,sum;
     double sum=0;
-    printf("Enter n:\n");
-    scanf("%d",&n);
-
-    for(i=1;i<=n;i++)
+    i=1;
+    while(term >=1e-5)
     {
        term =term / i;
        sum  += term;
+       i++;
     }
+
     sum+=1;
     printf("sum =%1f\n",sum);
     return 0;
