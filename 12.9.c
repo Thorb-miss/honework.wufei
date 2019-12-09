@@ -6,15 +6,13 @@ int   isPrime(int  x)
   for(i=2;i*i< x;i++)
   {
       if(x %i==0){
-          break;
+          return 0;
       }
   }
-  if(i*i>x){
       return 1;
-  }else{
-      return 0;
+
   }
-}
+
 
 int main(void)
 {
