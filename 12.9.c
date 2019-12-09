@@ -1,16 +1,15 @@
 #include<stdio.h>
-#include<math.h>
 
 int   isPrime(int  x)
 {
     int i;
-  for(i=2;i<=sqrt(x);i++)
+  for(i=2;i*i< x;i++)
   {
       if(x %i==0){
           break;
       }
   }
-  if(i>sqrt(x)){
+  if(i*i>x){
       return 1;
   }else{
       return 0;
@@ -19,16 +18,16 @@ int   isPrime(int  x)
 
 int main(void)
 {
-   int n,i,flag;
-   printf("Enter n:\n");
-   scanf("%d",&n);
-
-   flag=isPrime(n);
+   int i,flag;
+   for(i=2;i<=100;i++)
+   {
+ flag=isPrime(i);
    if(flag==1){
-       printf("Yes\n");
-   }else{
-       printf("No\n");
+       printf("%5d",i);
    }
+   }
+
    return 0;
+   }
  
-}
+ 
